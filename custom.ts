@@ -143,4 +143,25 @@ namespace RocketLink {
             led.plot(2, 4)
         }
     }
+
+    //% block="Oppskytning Status-Lys %state"
+    //% subcategory=Status
+    //% group="Status - Lys"
+    export function oppskytningStatusLys(state: boolean): void {
+        if (state) {
+            pins.digitalWritePin(DigitalPin.P2, 1)
+            led.plot(4, 0)
+            led.plot(4, 1)
+            led.plot(4, 2)
+            led.plot(4, 3)
+            led.plot(4, 4)
+        } else {
+            pins.digitalWritePin(DigitalPin.P2, 0)
+            led.unplot(4, 0)
+            led.unplot(4, 1)
+            led.unplot(4, 2)
+            led.unplot(4, 3)
+            led.plot(4, 4)
+        }
+    }
 }
