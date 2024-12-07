@@ -121,7 +121,7 @@ namespace RocketLink {
             led.unplot(0, 1)
             led.unplot(0, 2)
             led.unplot(0, 3)
-            led.unplot(0, 4)
+            led.plot(0, 4)
         }
     }
 
@@ -140,7 +140,7 @@ namespace RocketLink {
             led.unplot(2, 1)
             led.unplot(2, 2)
             led.unplot(2, 3)
-            led.unplot(2, 4)
+            led.plot(2, 4)
         }
     }
 }
