@@ -164,4 +164,23 @@ namespace RocketLink {
             led.plot(4, 4)
         }
     }
+
+    //% block="Arm LP Status-Lys %state"
+    //% subcategory=Status
+    //% group="Status - Lys"
+    export function armLPStatusLys(state: boolean): void {
+        if (state) {
+            led.plot(1, 0)
+            led.plot(1, 1)
+            led.plot(1, 2)
+            led.plot(1, 3)
+            led.plot(1, 4)
+        } else {
+            led.unplot(1, 0)
+            led.unplot(1, 1)
+            led.unplot(1, 2)
+            led.unplot(1, 3)
+            led.plot(1, 4)
+        }
+    }
 }
